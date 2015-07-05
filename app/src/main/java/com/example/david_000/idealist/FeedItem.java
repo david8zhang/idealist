@@ -4,18 +4,20 @@ package com.example.david_000.idealist;
  * Created by david_000 on 7/3/2015.
  */
 public class FeedItem {
-    private String ideaTitle, ideaText, imageUrl, postingDate;
+    private String ideaTitle, ideaCategory, ideaText, imageUrl, postingDate;
 
     public FeedItem(){
 
     }
 
-    public FeedItem(String ideaTitle, String ideaText, String imageUrl, String postingDate){
+
+    public FeedItem(String ideaTitle, String ideaCategory, String ideaText){
         super();
         this.ideaTitle = ideaTitle;
+        this.ideaCategory = ideaCategory;
         this.ideaText = ideaText;
-        this.imageUrl = imageUrl;
-        this.postingDate = postingDate;
+/*        this.imageUrl = imageUrl;
+        this.postingDate = postingDate;*/
 
     }
 
@@ -26,6 +28,15 @@ public class FeedItem {
     public void setIdeaText(String ideaText) {
         this.ideaText = ideaText;
     }
+
+    public String getIdeaCategory() {
+        return ideaCategory;
+    }
+
+    public void setIdeaCategory(String ideaCategory) {
+        this.ideaCategory = ideaCategory;
+    }
+
 
     public String getImageUrl() {
         return imageUrl;
@@ -50,9 +61,6 @@ public class FeedItem {
     public void setIdeaTitle(String ideaTitle) {
         this.ideaTitle = ideaTitle;
     }
-
-
-
 
 
 }

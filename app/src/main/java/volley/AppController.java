@@ -1,6 +1,5 @@
-package com.example.david_000.idealist;
+package volley;
 
-import com.example.david_000.idealist.LruBitmapCache;
 import android.app.Application;
 import android.text.TextUtils;
 
