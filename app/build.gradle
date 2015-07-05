@@ -36,5 +36,6 @@ dependencies {
     compile "com.android.support:support-v4:21.0.0"
     compile "com.google.android.gms:play-services:7.3.0"
     compile 'com.loopj.android:android-async-http:1.4.5'
-    compile 'com.amazonaws:aws-java-sdk:1.0.002'
+    compile 'com.android.support:design:22.2.0'
+
 }

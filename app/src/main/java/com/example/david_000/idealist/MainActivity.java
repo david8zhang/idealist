@@ -1,6 +1,7 @@
 package com.example.david_000.idealist;
 
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 
 import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
@@ -52,15 +54,27 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
         getSupportActionBar().setTitle(null);
 
         fetchData();
+
+        ImageButton post_button = (ImageButton)findViewById(R.id.newIdea);
+        post_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent postIntent = new Intent(MainActivity.this, PostActivity.class);
+                MainActivity.this.startActivity(postIntent);
+            }
+        });
     }
 
+    //TODO: Figure out a way to group ideas by their types. Maybe create different spreadsheets??
     private void fetchData() {
         new DownloadWebpageTask(new AsyncResult() {
             @Override
             public void onResult(JSONObject object) {
                 processJson(object);
             }
-        }).execute("https://spreadsheets.google.com/tq?key=1-03IU1yVAZgl2-yIaf_b73xbMHnUAWmcnKv-cGkp75Y");
+        }).execute("https://spreadsheets.google.com/tq?key=1-03IU1yVAZgl2-yIaf_b73xbMHnUAWmcnKv-cGkp75Y"); //TODO: Later build, allow user to enter in the link to their spreadsheet
+
+        //TODO: In later build, allow user to dynamically create new spreadsheets
     }
 
     private void processJson(JSONObject object){
@@ -76,9 +90,9 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
                 JSONArray columns = row.getJSONArray("c");
                 System.out.println("columns: " + columns);
 
-                String ideaTitle = columns.getJSONObject(0).getString("v");
-                String ideaCategory = columns.getJSONObject(1).getString("v");
-                String ideaText = columns.getJSONObject(2).getString("v");
+                String ideaTitle = columns.getJSONObject(1).getString("v");
+                String ideaCategory = columns.getJSONObject(2).getString("v");
+                String ideaText = columns.getJSONObject(3).getString("v");
 
                 System.out.println(ideaTitle);
                 System.out.println(ideaCategory);

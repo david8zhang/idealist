@@ -32,11 +32,17 @@
     <ImageButton
         android:id="@+id/newIdea"
         android:layout_width="match_parent"
-        android:layout_height= "80dp"
+        android:layout_height= "70dp"
         android:layout_gravity="bottom"
         android:layout_marginBottom="-5dp"
         android:layout_marginRight="-7dp"
-        android:layout_marginLeft="-7dp" />
+        android:layout_marginLeft="-7dp"
+        android:background="#00bf20"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/lightbulb" />
 
 
 </FrameLayout>

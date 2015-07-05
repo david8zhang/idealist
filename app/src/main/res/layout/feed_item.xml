@@ -36,14 +36,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:paddingTop="10dp"
                     android:id="@+id/postingDate"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:textSize="@dimen/feed_item_timestamp"/>
 
                 <TextView
-                    android:paddingTop="10dp"
                     android:id="@+id/ideaCategory"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
