@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
             public void onResult(JSONObject object) {
                 processJson(object);
             }
-        }).execute("https://spreadsheets.google.com/tq?key=1-03IU1yVAZgl2-yIaf_b73xbMHnUAWmcnKv-cGkp75Y"); //TODO: Later build, allow user to enter in the link to their spreadsheet
+        }).execute("https://spreadsheets.google.com/tq?key=1QhBAo0O8D6DW6NnQ2duhra4Mn9dZ8s8h4QOE7utFB6s"); //TODO: Later build, allow user to enter in the link to their spreadsheet
 
         //TODO: In later build, allow user to dynamically create new spreadsheets
     }
@@ -80,15 +80,13 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
     private void processJson(JSONObject object){
         try{
             JSONArray rows = object.getJSONArray("rows");
+
             System.out.println("row: " + rows);
             for(int r = 1; r < rows.length(); r++){
-                System.out.println(rows.length());
                 FeedItem item = new FeedItem();
 
                 JSONObject row = rows.getJSONObject(r);
-                System.out.println("row: " + row);
                 JSONArray columns = row.getJSONArray("c");
-                System.out.println("columns: " + columns);
 
                 String ideaTitle = columns.getJSONObject(1).getString("v");
                 String ideaCategory = columns.getJSONObject(2).getString("v");

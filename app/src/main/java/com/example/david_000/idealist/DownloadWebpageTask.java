@@ -11,6 +11,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 
 public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
     AsyncResult callback;
@@ -35,6 +37,8 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         // remove the unnecessary parts from the response and construct a JSON
+        String[] unformattedJSON = result.split("");
+        System.out.println(Arrays.toString(unformattedJSON)); //TODO: Figure out a way to parse out the TimeStamp
         int start = result.indexOf("{", result.indexOf("{") + 1);
         int end = result.lastIndexOf("}");
         String jsonResponse = result.substring(start, end);
