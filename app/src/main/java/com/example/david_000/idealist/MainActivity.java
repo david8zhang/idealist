@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
@@ -51,6 +52,21 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Created slide listener to detect when to create a new activity
+        listView.setOnTouchListener(new OnSlidingTouchListener(this){
+            public boolean onSlideRight(){
+                System.out.println("slide left");
+                return true;
+            }
+
+            public boolean onSlideLeft(){
+                System.out.println("slide right");
+                return true;
+            }
+
+        });
+
         getSupportActionBar().setTitle(null);
 
         fetchData();

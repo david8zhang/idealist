@@ -29,6 +29,8 @@
             android:divider="@null">
         </com.github.ksoichiro.android.observablescrollview.ObservableListView>
 
+
+
     <ImageButton
         android:id="@+id/newIdea"
         android:layout_width="match_parent"
