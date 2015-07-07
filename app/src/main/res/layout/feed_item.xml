@@ -46,10 +46,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/timestamp"
-                    android:textSize="13dp"/>
+                    android:textSize="13dp"
+                    android:paddingBottom="5dp"/>
 
                 <TextView
-                    android:paddingBottom="20dp"
                     android:id="@+id/ideaText"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
