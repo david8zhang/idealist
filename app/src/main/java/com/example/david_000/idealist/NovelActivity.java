@@ -1,24 +1,18 @@
 package com.example.david_000.idealist;
 
-
-import android.content.Context;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
@@ -30,52 +24,64 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by david_000 on 7/7/2015.
+ */
+public class NovelActivity extends AppCompatActivity implements ObservableScrollViewCallbacks{
 
-public class MainActivity extends AppCompatActivity implements ObservableScrollViewCallbacks{
-
-    AsyncResult callback;
     private ObservableListView listView;
-    private FeedListAdapter listAdapter;
+    private NovelListAdapter listAdapter;
     private List<FeedItem> feedItems;
     private Toolbar toolbar;
-    private int numItems = 0;
-    private PopupWindow popup;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.novel_activity);
 
-        listView = (ObservableListView)findViewById(R.id.list);
+        listView = (ObservableListView)findViewById(R.id.novel_list);
         listView.setScrollViewCallbacks(this);
 
         feedItems = new ArrayList<FeedItem>();
-        listAdapter = new FeedListAdapter(this, feedItems);
-
+        listAdapter = new NovelListAdapter(this, feedItems);
         listView.setAdapter(listAdapter);
 
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder adb = new AlertDialog.Builder(NovelActivity.this);
+                adb.setTitle("Delete?");
+                adb.setMessage("Are you sure you want to delete " + position);
+                final int positionToRemove = position;
+                adb.setNegativeButton("Cancel", null);
+                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        feedItems.remove(positionToRemove);
+                        listAdapter.notifyDataSetChanged();
+                    }
+                });
+                adb.show();
+            }
+        });
+
+        toolbar = (Toolbar)findViewById(R.id.novel_toolbar);
         setSupportActionBar(toolbar);
 
-        popup = new PopupWindow(this);
 
-        //Created slide listener to detect when to create a new activity
-        listView.setOnTouchListener(new OnSlidingTouchListener(this){
-            public boolean onSlideRight(){
+        listView.setOnTouchListener(new OnSlidingTouchListener(this) {
+            public boolean onSlideRight() {
                 System.out.println("slide left");
+                Intent novelIntent = new Intent(NovelActivity.this, MainActivity.class);
+                novelIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(novelIntent);
                 return true;
             }
 
-            public boolean onSlideLeft(){
+            public boolean onSlideLeft() {
                 System.out.println("slide right");
-                Intent novelIntent = new Intent(MainActivity.this, NovelActivity.class);
-                novelIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(novelIntent);
                 return true;
             }
 
@@ -83,54 +89,54 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
 
         getSupportActionBar().setTitle(null);
 
-        fetchData(numItems);
+        fetchData();
 
-        ImageButton post_button = (ImageButton)findViewById(R.id.newIdea);
+        ImageButton post_button = (ImageButton)findViewById(R.id.newNovel);
         post_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent postIntent = new Intent(MainActivity.this, PostActivity.class);
-                MainActivity.this.startActivity(postIntent);
+                Intent postNovelIntent = new Intent(NovelActivity.this, PostNovelActivity.class); //TODO Clean up PostActivity so as to trivialize the need for a separate activity
+                NovelActivity.this.startActivity(postNovelIntent);
             }
         });
+
     }
 
-    //TODO: Figure out a way to group ideas by their types. Maybe create different spreadsheets??
-    private void fetchData(final int numObjects) {
+    private void fetchData() {
         new DownloadWebpageTask(new AsyncResult() {
             @Override
             public void onResult(JSONObject object) {
-                processJson(object,numObjects);
+                processJson(object);
             }
-        }).execute("https://spreadsheets.google.com/tq?key=1K9klT5zi86d3Gi2pOWdZUwLztgGwL-ZlV0CyWY8tgtw&tq=select%20B%2C%20C%2C%20D"); //TODO: Later build, allow user to enter in the link to their spreadsheet
+        }).execute("https://spreadsheets.google.com/tq?key=1lWhkH0Pe2pFqwJ6f_eK1Lb-ZJ1Ig4Hi8oPFFGrhllGE&tq=select%20B%2C%20C%2C%20D"); //TODO: Later build, allow user to enter in the link to their spreadsheet
 
         //TODO: In later build, allow user to dynamically create new spreadsheets
     }
 
-    private void processJson(JSONObject object, int numObjects){
+    private void processJson(JSONObject object){
         try{
             JSONArray rows = object.getJSONArray("rows");
 
             System.out.println("row: " + rows);
-            for(int r = rows.length()-1; r >= numObjects; r--){ //TODO: Create a public variable that lets you adjust how many items you want to display
+            for(int r = rows.length() - 1; r >= 0; r--){
                 FeedItem item = new FeedItem();
 
                 JSONObject row = rows.getJSONObject(r);
                 JSONArray columns = row.getJSONArray("c");
 
-                String ideaTitle = columns.getJSONObject(0).getString("v");
-                String ideaCategory = columns.getJSONObject(1).getString("v");
-                String ideaText = columns.getJSONObject(2).getString("v");
+                String novelConcept = columns.getJSONObject(0).getString("v");
+                String novelCategory = columns.getJSONObject(1).getString("v");
+                String novelSummary = columns.getJSONObject(2).getString("v");
 
-                System.out.println(ideaTitle);
-                System.out.println(ideaCategory);
-                System.out.println(ideaText);
+                System.out.println(novelConcept);
+                System.out.println(novelCategory);
+                System.out.println(novelSummary);
 
-                item.setIdeaTitle(ideaTitle);
-                item.setIdeaCategory(ideaCategory);
-                item.setIdeaText(ideaText);
+                item.setIdeaTitle(novelConcept);
+                item.setIdeaCategory(novelCategory);
+                item.setIdeaText(novelSummary);
 
-                if(ideaTitle.equals("test") || ideaTitle.equals("null")){
+                if(novelConcept.equals("test") || novelConcept.equals("null")){
                     System.out.println("Shit outta luck");
                 } else {
                     feedItems.add(item);
@@ -141,6 +147,8 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+
     }
 
     @Override
@@ -156,11 +164,6 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-/*        switch(id){
-            case R.id.action_settings: //TODO Future build, add a search bar
-
-        }*/
-
 
         //noinspection SimplifiableIfStatement
 

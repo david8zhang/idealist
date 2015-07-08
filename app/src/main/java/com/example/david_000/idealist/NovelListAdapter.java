@@ -1,9 +1,12 @@
 package com.example.david_000.idealist;
 
+/**
+ * Created by david_000 on 7/7/2015.
+ */
+
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +22,14 @@ import volley.AppController;
 /**
  * Created by david_000 on 7/3/2015.
  */
-public class FeedListAdapter extends BaseAdapter {
+public class NovelListAdapter extends BaseAdapter {
 
     private Activity activity;
     private LayoutInflater inflater;
     private List<FeedItem> feedItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
-    public FeedListAdapter(Activity activity, List<FeedItem> feedItems){
+    public NovelListAdapter(Activity activity, List<FeedItem> feedItems){
         this.activity = activity;
         this.feedItems = feedItems;
     }
@@ -51,20 +54,16 @@ public class FeedListAdapter extends BaseAdapter {
         if(inflater == null)
             inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if(convertView == null)
-            convertView = inflater.inflate(R.layout.feed_item, null);
+            convertView = inflater.inflate(R.layout.novel_item, null);
         if(imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
 
-        TextView ideaTitle = (TextView)convertView.findViewById(R.id.ideaTitle);
-        TextView ideaCategory = (TextView)convertView.findViewById(R.id.ideaCategory);
+        TextView ideaTitle = (TextView)convertView.findViewById(R.id.novelConcept);
+        TextView ideaCategory = (TextView)convertView.findViewById(R.id.novelCategory);
         TextView postingDate = (TextView)convertView.findViewById(R.id.postingDate);
-        TextView ideaText = (TextView)convertView.findViewById(R.id.ideaText);
+        TextView ideaText = (TextView)convertView.findViewById(R.id.novelSummary);
 
         FeedItem item = feedItems.get(position);
-
-        if(item.getIdeaTitle().equals("test") || item.getIdeaTitle() == null){
-            convertView.setVisibility(View.GONE);
-        }
 
         ideaTitle.setText(item.getIdeaTitle());
         ideaCategory.setText(item.getIdeaCategory());
@@ -104,8 +103,8 @@ public class FeedListAdapter extends BaseAdapter {
             ideaImageView.setVisibility(View.GONE);
         }
 */
-
         return convertView;
 
     }
 }
+
