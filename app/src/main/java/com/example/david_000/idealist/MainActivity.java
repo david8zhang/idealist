@@ -197,7 +197,6 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
 
     private boolean toolbarIsHidden(){
         return ViewHelper.getTranslationY(toolbar) == -toolbar.getHeight();
-
     }
     private void showToolbar(){
         moveToolbar(0);
@@ -229,5 +228,4 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
     protected int getScreenHeight() {
         return findViewById(android.R.id.content).getHeight();
     }
-
 }
