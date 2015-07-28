@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-04203805acdcef449119c52129f401dab2925886.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-c5b0239a8cb75efb0a123bc4045504c4634e978e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-b61d0b8bde297069a5a71d946bf19bf54c4c5c1f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-3bfe86945afb39ee7649db816f12bcf9e4ebc32d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\libs\volley.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\volley-5d34d91362517d2a3c289da3dd5f169c6184aaf2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-cb53071b38536ac4150cabe28495b58e8d067d10.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-fb2581b1803870dbc003de88333a9f976f0a98ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-ecf19449a90eeee98e12e1ead4807c4fb9e90c58.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-e31d71eae3d13de0674f3d5573c4b02ea3b53e6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\library-2.4.0-cc34aabd993db111738949194a51f4085d30fe34.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-a64099c618a8ee7084715a2bd3ddb9d759f2fd71.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-9af68ff03df050813dda501f537617826c364083.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-695c41b4406ea2c4c2848812754793a6c986ae57.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-df96143a10e8e438682aa6ec0d0948a04fa8827a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-76c571151c70bec11c8ca8f181366fd2604e77b9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-b4196dd204a103f1dc85a5ee0097fb7d03ca1cf5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.5\77bf7cacf9cefe19dc105e5425d2eb1bb5285881\android-async-http-1.4.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.5-85d85423920f1b4f7e31a5443ce68ca4f82b6c74.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-2b58a313da0353417a6e420af5102a566745b5dc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-02277bde58288dd856391a1e82de7d9b6d2ddc9b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-f6b9ed9b6ce7e30a6ee5a680f678197cac50525d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-f8a685256f26126484043f36169472fc71fc896a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-39104362ecc3921e435e6d86077e2d30e5a20a15.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-07839ffe776bcbf6f6e0038636e98cb042eb84ca.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-90b86a7afe2e392d79af22e4ff30d2f0a44faba6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-c721a108ae6cfb0eb8c2a11adabc67f3b6dd17fe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-e0c2da50c2a1663fd8c0a54dfac3e49c6e812ad7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-a79aaaae1abb0d337f15067111245abb85f89d01.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-695661ad1247c28997f38aca30cf07b41c93b227.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\classes-74463ab27f9df8b4f3fe8238bdb4eb13661fc3b5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Edward\Desktop\Dev\idealist-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-2b59df64b7455f6d5ff640eaa191d95670e340ab.jar" />
+    </item>
+
+</items>
